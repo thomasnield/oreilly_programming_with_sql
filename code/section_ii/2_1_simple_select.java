@@ -10,7 +10,7 @@ public class JavaLauncher {
         try {
             Connection conn = DriverManager.getConnection("jdbc:sqlite:/c:/git/oreilly_advanced_sql_for_data/thunderbird_manufacturing.db");
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * from CUSTOMER");
+            ResultSet rs = stmt.executeQuery("SELECT * from PRODUCT WHERE PRICE >= 100");
 
             while (rs.next()) {
                 System.out.println(rs.getInt("CUSTOMER_ID") + " " + rs.getString("CUSTOMER_NAME"));
