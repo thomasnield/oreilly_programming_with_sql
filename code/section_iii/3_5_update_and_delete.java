@@ -26,6 +26,11 @@ public class JavaLauncher {
             while (rs.next()) {
                 System.out.println(rs.getString("CUSTOMER_ID") + " " + rs.getString("CUSTOMER_NAME") + " " + rs.getString("STATE"));
             }
+
+            // Update customers
+            ps = conn.prepareStatement("UPDATE CUSTOMER SET STATE = upper(STATE)");
+            ps.execute();
+            
             //release connection
             conn.close();
 
