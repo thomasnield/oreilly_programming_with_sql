@@ -9,7 +9,8 @@ public class JavaLauncher {
 
         try {
 
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:/c:/git/oreilly_intermediate_sql_for_data/thunderbird_manufacturing.db");
+            //Connection conn = DriverManager.getConnection("jdbc:sqlite:/c:/git/oreilly_intermediate_sql_for_data/thunderbird_manufacturing.db");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:///Users/thomasnield/git/oreilly_intermediate_sql_for_data/thunderbird_manufacturing.db");
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM CUSTOMER WHERE CATEGORY = ?");
 
             stmt.setString(1, "COMMERCIAL");
