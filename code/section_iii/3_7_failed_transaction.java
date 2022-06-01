@@ -12,7 +12,8 @@ public class JavaLauncher {
                     {"City of Plano", "239 Plano Dr", "Plano", "TX" } // third item is missing data
             };
 
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:/c:/git/oreilly_intermediate_sql_for_data/thunderbird_manufacturing.db");
+            //Connection conn = DriverManager.getConnection("jdbc:sqlite:/c:/git/oreilly_intermediate_sql_for_data/thunderbird_manufacturing.db");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:///Users/thomasnield/git/oreilly_intermediate_sql_for_data/thunderbird_manufacturing.db");
 
             // turn on transactions
             conn.setAutoCommit(false);
