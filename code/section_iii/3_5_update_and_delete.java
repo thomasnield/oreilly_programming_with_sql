@@ -6,7 +6,8 @@ public class JavaLauncher {
 
         try {
 
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:/c:/git/oreilly_intermediate_sql_for_data/thunderbird_manufacturing.db");
+            //Connection conn = DriverManager.getConnection("jdbc:sqlite:/c:/git/oreilly_intermediate_sql_for_data/thunderbird_manufacturing.db");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:///Users/thomasnield/git/oreilly_intermediate_sql_for_data/thunderbird_manufacturing.db");
 
             // Delete customers with ID greater than 10
             PreparedStatement ps = conn.prepareStatement("DELETE FROM CUSTOMER WHERE CUSTOMER_ID > ?");
