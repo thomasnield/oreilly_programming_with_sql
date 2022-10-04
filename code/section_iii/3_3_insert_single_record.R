@@ -1,7 +1,6 @@
 
 library(DBI)
 library(RSQLite)
-library(dplyr)
 
 db <- dbConnect(SQLite(), dbname='thunderbird_manufacturing.db')
 
